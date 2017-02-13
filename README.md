@@ -45,6 +45,9 @@ ID (Binary) | Description | Rating
 We plan to use the Agile methodology to keep in line with Part 2 of the project and to accommodate for the scope of the project.
 
 ## Other Relevant Information
+#### GitHub Info
 GitHub  Repository Link: https://github.com/Dpasi314/DevConnect
+#### Current Projects
 
+![Projects](http://i.imgur.com/8xFjeQw.png)
 
