@@ -12,7 +12,7 @@
 We are creating a web application to match students in a course for group projects, based on parameters like skills (and level of proficiency in that skill), availability, interests, and previous courses taken.
 
 ## Our Vision
-Making finding groups, just a little less terrible.
+Make finding groups, just a little less terrible.
 
 ## Motivation
 We recognise the need for a group making facilitator for computer science class projects, becauseit is often challenging to build a group when you do not already personally know people in the course. As a result, many groups end up randomly joining together, leading to uneven distribution of skills across the group, which makes group cohesion difficult, thus justifying the need for this kind of web application.
