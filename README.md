@@ -15,7 +15,7 @@ We are creating a web application to match students in a course for group projec
 Make finding groups, just a little less terrible.
 
 ## Motivation
-We recognise the need for a group making facilitator for computer science class projects, becauseit is often challenging to build a group when you do not already personally know people in the course. As a result, many groups end up randomly joining together, leading to uneven distribution of skills across the group, which makes group cohesion difficult, thus justifying the need for this kind of web application.
+We recognise the need for a group making facilitator for computer science class projects, because it is often challenging to build a group when you do not already personally know people in the course. As a result, many groups end up randomly joining together, leading to uneven distribution of skills across the group, which makes group cohesion difficult, thus justifying the need for this kind of web application.
 
 ## Risks
 * Lack of experience in web application development
@@ -24,7 +24,7 @@ We recognise the need for a group making facilitator for computer science class 
 * Lack of shared language skills across the group
 
 ## Mitigation Strategy
-* Breaking up the project into pieces aht distributing them to members due to strength and experience
+* Breaking up the project into pieces and distributing them to members due to strength and experience
 * Keeping the pieces of the assignment small
 * Pair programming on pieces of the assignments when necessary to ensure complicated pieces are implemented effectively
 * Meeting regularly to stay connected on the pieces of the project, and to collaborate on solving problems a member may encounter
