@@ -1,10 +1,11 @@
-# DevConnect - A Project to Help Make Team Finding Less Horrible
+# DevConnect
+### A Project to Help Make Team Finding Less Horrible
 ## Team Members
-* Cassidy Haas (@cassidyhhaas)
-* Ryan Turner (@ryan-turner)
-* Dante Pasionek (@Dpasi314)
-* Pierce Doogan (@pierce-doogan)
-* Jeffrey Lipnick (@jefferylipnick)
+* Cassidy Haas ( @cassidyhhaas )
+* Ryan Turner ( @ryan-turner )
+* Dante Pasionek ( @Dpasi314 )
+* Pierce Doogan ( @pierce-doogan )
+* Jeffrey Lipnick ( @jefferylipnick )
 
 
 ## What does it do?
