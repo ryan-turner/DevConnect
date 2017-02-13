@@ -5,7 +5,7 @@
 * Ryan Turner ( @ryan-turner )
 * Dante Pasionek ( @Dpasi314 )
 * Pierce Doogan ( @pierce-doogan )
-* Jeffrey Lipnick ( @jefferylipnick )
+* Jeffrey Lipnick ( @jeffreylipnick )
 
 
 ## What does it do?
