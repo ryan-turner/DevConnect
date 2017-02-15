@@ -48,7 +48,6 @@ We plan to use the Agile methodology to keep in line with Part 2 of the project 
 #### GitHub Info
 GitHub  Repository Link: https://github.com/Dpasi314/DevConnect
 #### Current Projects
-
-![Projects](http://i.imgur.com/8xFjeQw.png)
+Trello Project: https://trello.com/b/Ac1Rkcqh/team-product-sprint-1
 ![Projects](http://i.imgur.com/19TRYdy.png)
 
