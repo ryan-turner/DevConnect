@@ -51,3 +51,70 @@ GitHub  Repository Link: https://github.com/Dpasi314/DevConnect
 Trello Project: https://trello.com/b/Ac1Rkcqh/team-product-sprint-1
 ![Projects](http://i.imgur.com/19TRYdy.png)
 
+## Matching Algorithm
+Here is the pseudocode used in our matching algorithm to make group recommendations for users. This is the algorithm that runs when a user first signs up for group finding.
+```
+// Get project information from projects table
+group_max_size
+
+// Get the following values from the users table and store in array
+// user_languages is an array of the programming languages user knows
+// user_skills is an array of the skills user has (Front-end dev, Back-end dev, design, ect...)
+U = [user_interest, user_languages, user_skills, user_availability] 
+
+// Get list of all groups from groups table
+Matches = []
+for each group in list_of_groups:
+	// Get group information and store in array
+	// group_skills is an array of skills members in the group already posses
+	G = [group_name, group_interest, group_language_preference, group_skills, group_availability]
+	if group_size < group_max_size:
+		(group_name, match_score, match_data) = run_match(U, G)
+		M.append((group_name, match_score, match_data))
+	end
+end
+// Return array of matches and their data for display
+return Matches
+
+// Generate matching score out of 100. group_interest and group_language_preference add the largest values.  We assume 3 day/time options for the user and 2 user skills.
+function run_match(U, G):
+	match_score = 0
+	match_data = []
+	// While many of the values have been passed in as arrays to simplify data passing, they'll be referred to as their end variable value below for clarity's sake.
+	if user_interest == group_interest:
+		match_score += 30
+		append to match_data
+	end
+	for language in user_languages:
+		// there is only one group_language_preference so this value can only be added once
+		if language == group_language_preference: 
+			match_score += 20
+			append to match_data
+			break
+		end
+	end
+	// Assumes 3 day/time options per user
+	for uday,utime in user_availability:
+		for gday,gtime in group_availability:
+			if uday == gday and utime == gtime:
+				match_score += 10
+				append to match_data
+			end
+		end
+	end
+	// Assumes 2 skills in user_skills
+	for skill in user_skills:
+		if skill not in group_skills:
+			match_score += 10
+		end
+	end
+
+	return group_name, match_score, match_data
+
+```
+
+
+
+
+
+
