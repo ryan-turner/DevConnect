@@ -59,28 +59,32 @@ group_max_size
 
 // Get the following values from the users table and store in array
 // user_languages is an array of the programming languages user knows
-// user_skills is an array of the skills user has (Front-end dev, Back-end dev, design, ect...)
+// user_skills is an array of the skills user has (Front-end dev, Back-end dev, design, ect...).  Max size of 2 skills
+// user_availability is an array of days/times user is available.  Max of 3 day/times.
+// The max size of the skills/availability arrays keeps our match_score cap at 100.
 U = [user_interest, user_languages, user_skills, user_availability] 
 
 // Get list of all groups from groups table
-Matches = []
+Matches = [] // empty list of matches
 for each group in list_of_groups:
-	// Get group information and store in array
-	// group_skills is an array of skills members in the group already posses
-	G = [group_name, group_interest, group_language_preference, group_skills, group_availability]
 	if group_size < group_max_size:
-		(group_name, match_score, match_data) = run_match(U, G)
+		// Get group information and store in array
+		// group_skills is an array of skills members in the group already posses
+		G = [group_name, group_interest, group_language_preference, group_skills, group_availability]
+		(group_name, match_score, match_data) = run_match(U, G) // run_match is defined below
 		M.append((group_name, match_score, match_data))
 	end
 end
 // Return array of matches and their data for display
 return Matches
 
-// Generate matching score out of 100. group_interest and group_language_preference add the largest values.  We assume 3 day/time options for the user and 2 user skills.
+// Generate matching score out of 100. group_interest and group_language_preference 
+// add the largest values.  We assume 3 day/time options for the user and 2 user skills.
 function run_match(U, G):
 	match_score = 0
 	match_data = []
-	// While many of the values have been passed in as arrays to simplify data passing, they'll be referred to as their end variable value below for clarity's sake.
+	// While many of the values have been passed in as arrays to simplify data passing, 
+	// they'll be referred to as their end variable value below for clarity's sake.
 	if user_interest == group_interest:
 		match_score += 30
 		append to match_data
