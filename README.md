@@ -59,7 +59,8 @@ group_max_size
 
 // Get the following values from the users table and store in array
 // user_languages is an array of the programming languages user knows
-// user_skills is an array of the skills user has (Front-end dev, Back-end dev, design, ect...).  Max size of 2 skills
+// user_skills is an array of the skills user has: 
+// (Front-end dev, Back-end dev, design, ect...). Max size of 2 skills
 // user_availability is an array of days/times user is available.  Max of 3 day/times.
 // The max size of the skills/availability arrays keeps our match_score cap at 100.
 U = [user_interest, user_languages, user_skills, user_availability] 
