@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+}
+
+#logo {
+  height: 180px;
+  width: auto;
+  display: inline-block;
+  margin-left: 27%;
+  margin-right: auto;
+}
+
+button {
+  color: #fff;
+  background-color: #bdbdbd;
+  background-image: linear-gradient(bottom, #d3d3d3, white);
+  /*box-shadow: inset 0 0 0 0.5px white;*/
+  border: none;
+  border-radius: 3px;
+  color: black;
+  padding: 0% 1%;
+  text-align: center;
+  margin: 1%;
+  font-size: 25px;
+  font-family: 'Nova Square', cursive;
+  font-weight:bold;
+
+}
+
+#menu{
+  margin-left: 33%;
+  margin-right: auto;
+}
+
+.names{
+    font-family: 'Nova Square', cursive;
+    font-size:40px;
+    color: gray;
+    margin-left:20%;
+    margin-right:20%;
+    text-align:center;
+}
