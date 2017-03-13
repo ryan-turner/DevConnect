@@ -40,3 +40,14 @@ button {
     margin-right:20%;
     text-align:center;
 }
+
+form {
+  color: white;
+  font-family: 'Nova Square', cursive;
+  display:run-in;
+}
+
+fieldset{
+  margin-left:15%;
+  margin-right:15%;
+}
