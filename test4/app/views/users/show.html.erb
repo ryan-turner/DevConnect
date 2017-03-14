@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Class year:</strong>
+  <%= @user.Class_Year %>
+</p>
+
+<p>
+  <strong>Courses taken:</strong>
+  <%= @user.Courses_Taken %>
+</p>
+
+<p>
+  <strong>Days available:</strong>
+  <%= @user.Days_Available %>
+</p>
+
+<p>
+  <strong>Preffered programming languages:</strong>
+  <%= @user.Preffered_Programming_Languages %>
+</p>
+
+<p>
+  <strong>Project interests:</strong>
+  <%= @user.Project_Interests %>
+</p>
+
+<p>
+  <strong>Groupid:</strong>
+  <%= @user.Groupid %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
