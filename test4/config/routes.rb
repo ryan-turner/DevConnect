@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  resources :groups
-  resources :users
-  #I added this root so that when you go to localhost:3000 it routes straiht to the user page
-  root 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -57,4 +53,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+get 'test' => 'pages#homepage'
+get 'anothertest' => 'pages#anothertest'
 end
