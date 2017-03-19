@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Nova+Square', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<img id="logo" src="/assets/images/DevConnect.png" alt="DevConnect Logo">
+	<nav>
+		<ul>
+			<li><a class="button" href="#">Signup</a></li>
+			<li><a class="button" href="#">Login</a></li>
+			<li><a class="button" href="about/index">About</a></li>
+		</ul>
+	</nav>
+	<main>
+		<%= yield %>
+	</main>
 
 </body>
 </html>
