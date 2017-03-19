@@ -69,6 +69,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
+    mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
     nokogiri (1.6.7.2)
@@ -143,6 +144,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mini_portile2
   pg (~> 0.15)
   rails (= 4.2.6)
   sass-rails (~> 5.0)
@@ -153,4 +155,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.14.6
