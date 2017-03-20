@@ -75,8 +75,17 @@ form {
 
 fieldset{
   margin-left:15%;
+  background-color:white;
+  color: black;
   margin-right:15%;
 }
+
+legend{
+  color: grey;
+  background-color: white;
+  border-radius: 7px; 
+}
+
 @media screen and (max-width: 700px) {
   .names li {
     display: block;
