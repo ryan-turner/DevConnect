@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>DevConnect</title>
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
   </head>
   <body>
@@ -17,34 +17,56 @@
         Last name:<br>
         <input type="text" name="lastname">
         <br>
-        <br>
-        <input type="submit" value="Submit">
       </fieldset>
       <br>
       <fieldset>
-        <legend>Courses Taken</legend>
-        <input type="checkbox" name="1300" value="class"> CSCI 1300/1310 <br>
-        <input type="checkbox" name="2270" value="class"> CSCI 2270 <br>
-        <input type="checkbox" name="2400" value="class"> CSCI 2400 <br>
-        <input type="checkbox" name="2270" value="class"> CSCI 2270 <br>
-        <input type="checkbox" name="3022" value="class"> CSCI 3022 <br>
-        <input type="checkbox" name="3155" value="class"> CSCI 3155 <br>
-        <input type="checkbox" name="2820" value="class"> CSCI 2820 <br>
-        <input type="checkbox" name="2824" value="class"> CSCI 2824 <br>
-        <input type="checkbox" name="3750" value="class"> CSCI 3753 <br>
-        <input type="submit" value="Submit">
+        <legend>Account Information </legend>
+        Email:<br>
+        <input type="text" name="email">
+        <br>
+        Password:<br>
+        <input type="text" name="password">
+        <br>
       </fieldset>
       <br>
       <fieldset>
         <legend>Languages</legend>
-        <input type="checkbox" name="Python" value="language"> Python <br>
+        <div class="menu-wrap">
+          <nav class="menu">
+            <ul class="clearfix">
+              <li><a href='#'> Language 1 </a>
+                <ul class="sub-menu">
+                  <li><a href '#'>Python</a></li>
+                  <li><a href '#'>Ruby</a></li>
+                  <li><a href '#'>C++</a></li>
+                  <li><a href '#'>C</a></li>
+                  <li><a href '#'>Javascript</a></li>
+                  <li><a href '#'>Java</a></li>
+                  <li><a href '#'>HTML/CSS</a></li>
+                </ul>
+              </li>
+              <li><a href='#'>Language 2</a>
+                <ul class="sub-menu">
+                  <li><a href '#'>Python</a></li>
+                  <li><a href '#'>Ruby</a></li>
+                  <li><a href '#'>C++</a></li>
+                  <li><a href '#'>C</a></li>
+                  <li><a href '#'>Javascript</a></li>
+                  <li><a href '#'>Java</a></li>
+                  <li><a href '#'>HTML/CSS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- <input type="checkbox" name="Python" value="language"> Python <br>
         <input type="checkbox" name="C++" value="language"> C++ <br>
         <input type="checkbox" name="C" value="language"> C <br>
         <input type="checkbox" name="Java" value="language"> Java <br>
         <input type="checkbox" name="Javascript" value="language"> Javascript <br>
         <input type="checkbox" name="Ruby" value="language"> Ruby <br>
         <input type="checkbox" name="Ruby on Rails" value="language"> Ruby on Rails <br>
-        <input type="checkbox" name="HTML" value="language"> HTML/CSS <br>
+        <input type="checkbox" name="HTML" value="language"> HTML/CSS <br> -->
       </fieldset>
       <br>
       <fieldset>
@@ -53,6 +75,11 @@
         <input type="checkbox" name="Shell" value="skill"> Shell Scripting <br>
         <input type="checkbox" name="App" value="skill"> App Development <br>
         <input type="checkbox" name="PaaS" value="skill"> PaaS (Heroku or Google AppEngine) <br>
+      </fieldset>
+        <br>
+        <br>
+        <br>
+        <input id="formSubmit" type="submit" value="Submit">
     </form>
   </body>
 </html>
