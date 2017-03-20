@@ -273,11 +273,12 @@ main {
 .menu a {
    transition: all linear 0.15s;
    color:#91919191;
+   text-decoration: none;
 }
 
 .menu li:hover > a, .menu .current-item > a {
    text-decoration: none;
-   color: #be5b70;
+   color: #5cbfaa;
 }
 
 .menu .arrow {
@@ -291,17 +292,11 @@ main {
   display: inline-block;
   position: relative;
   font-size: 19px;
-}
-
-.menu > ul > li {
-  float: left;
-  display:inline-block;
-  postion: relative;
-  font-size: 19px;
+  margin: 10px;
 }
 
 .menu >ul > li:hover > a, .menu >ul > .current-item >a {
-  background: #2e2728;
+  background: white;
 }
 
 /*Bottom Level */
@@ -317,11 +312,11 @@ main {
     position:absolute;
     top:100%;
     left:0px;
-    z-index:-1;
+    z-index: 1;
     opacity:0;
-    transition:opacity linear 0.15s;
+    transition: opacity linear 0.15s;
     box-shadow:0px 2px 3px rgba(0,0,0,0.2);
-    background:#2e2728;
+    background: gray;
 }
 
 .sub-menu li {
@@ -335,7 +330,7 @@ main {
 }
 
 .sub-menu li a:hover, .sub-menu .current-item a {
-    background:#3e3436;
+  background: #2e2728;
 }
 
 
