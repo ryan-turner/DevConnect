@@ -1,0 +1,57 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br>
+    <%= f.text_field :interest %>
+  </div>
+  <div class="field">
+    <%= f.label :language1 %><br>
+    <%= f.text_field :language1 %>
+  </div>
+  <div class="field">
+    <%= f.label :language2 %><br>
+    <%= f.text_field :language2 %>
+  </div>
+  <div class="field">
+    <%= f.label :time1 %><br>
+    <%= f.text_field :time1 %>
+  </div>
+  <div class="field">
+    <%= f.label :time2 %><br>
+    <%= f.text_field :time2 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill %><br>
+    <%= f.text_field :skill %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :groupid %><br>
+    <%= f.number_field :groupid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
