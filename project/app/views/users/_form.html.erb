@@ -20,36 +20,32 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :interest %><br>
-    <%= f.text_field :interest %>
-  </div>
-  <div class="field">
-    <%= f.label :language1 %><br>
-    <%= f.text_field :language1 %>
-  </div>
-  <div class="field">
-    <%= f.label :language2 %><br>
-    <%= f.text_field :language2 %>
-  </div>
-  <div class="field">
-    <%= f.label :time1 %><br>
-    <%= f.text_field :time1 %>
-  </div>
-  <div class="field">
-    <%= f.label :time2 %><br>
-    <%= f.text_field :time2 %>
-  </div>
-  <div class="field">
-    <%= f.label :skill %><br>
-    <%= f.text_field :skill %>
-  </div>
-  <div class="field">
     <%= f.label :password %><br>
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :groupid %><br>
-    <%= f.number_field :groupid %>
+    <%= f.label :interest %><br>
+    <%= f.select :interest, ['Mobile Apps', 'Games', 'Web Applications', 'Social Media'] %>
+  </div>
+  <div class="field">
+    Strongest Language<br>
+    <%= f.select :language1, ['Python', 'C++', 'Javascript', 'Scala', 'Java', 'C', 'C#', 'Objective-C'] %>
+  </div>
+  <div class="field">
+    Second Strongest Language<br>
+    <%= f.select :language2, ['C++', 'Python', 'Javascript', 'Scala', 'Java', 'C', 'C#', 'Objective-C'] %>
+  </div>
+  <div class="field">
+    Best Availability<br>
+    <%= f.select :time1, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %>
+  </div>
+  <div class="field">
+    Second Best Availability<br>
+    <%= f.select :time2, ['Tuesday', 'Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %>
+  </div>
+  <div class="field">
+    Strongest Skill<br>
+    <%= f.select :skill, ['Front-end', 'Back-end', 'Design', 'Project Management', 'Full-stack'] %>
   </div>
   <div class="actions">
     <%= f.submit %>
