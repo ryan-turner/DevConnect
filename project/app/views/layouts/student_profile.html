@@ -1,58 +1,48 @@
 <DOCTYPE! html>
 <html>
 	<head>
-    	<title>DevConnect-Profile</title>
+    	<title>Profile</title>
     	<link href="main.css" rel="stylesheet" type="text/css">
     	<link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
   	</head>
   	<body>
   		<img src="DevConnect.png" id="logo">
   		<div class="bMargins">
-	  		<h1 style="color: white; text-align: center;">[FirstName]'s Profile</h1>
+	  		<h1 style="color: white; text-align: center;"><%=database.FirstName%>'s Profile</h1>
 	  		<br>
 	  		<div class="col-l3">
-		  	<a style="font-size: 32px;">Bio</a>
+		  	<h2>Bio</h2>
 		  	<br>
-		  		<a>First Name: [FirstName]</a><br>
-		  		<a>Last Name: [LastName]</a><br>
-		  		<a>Email Address</a><br>
-		  		<a>Courses Needing Groups</a><br>
+		  		First Name: <%=database.FirstName%>
+		  		Last Name: <%=database.LastName%>
+		  		Email Address: <%=database.email%>
 		  	<br>
-		  	<a style="font-size: 32px;">Interests</a>
-		  	<br>
-		  		<a>Web App</a><br>
-		  		<a>Game Development</a><br>
-		  		<a>Assistive Tool</a><br>
-		  		<a>Other</a><br>
 		  	</div>
-	  	
+
 	  		<div class="col-m3">
-	  		<a style="font-size: 32px;">Languages</a>
+	  		<a style="font-size: 32px;">Languages and Interests</a>
 	  		<br>
-		  		<a>Basic C</a><br>
-		  		<a>Java</a><br>
-		  		<a>Python</a><br>
-		  		<a>HTML</a><br>
+		  		Languages: <br>
+          <%=database.language1%>
+          <%=database.language2%>
+          <%=database.interest%>
+
 			<br>
 	  		<a style="font-size: 32px;">Availability</a>
 	  		<br>
-		  		<a>Monday: <a>Mornings | Afternoons | Evenings</a></a><br>
-		  		<a>Tuesday: <a>Mornings | Evenings</a></a><br>
-		  		<a>Wednesday: <a>Evenings</a></a><br>
-		  		<a>Thursday: <a>Evenings</a></a><br>
-		  		<a>Friday: <a>Evenings</a></a><br>
-		  		<a>Saturday: <a>Mornings | Afternoons</a></a><br>
-		  		<a>Sunday: <a>Mornings</a></a><br>
+		  		<%=database.availability1%>
+          <%=database.availability2%>
 	  		</div>
 
-	  		<div class="col-r3">
+<!-- I think we should leave out having a profile image for now as it brings up the issue of hosting images on a server and stuff like that -->
+	  		<!-- <div class="col-r3">
 		  	<a style="font-size: 32px;">Profile Image</a><br>
 		  	<br>
 		  	<img class="profile-image" src="https://avatars2.githubusercontent.com/u/25470732?v=3&u=027e2bf5750e7c2ce4f6cd0f84e1d0e5077a2a2b&s=400" /><br>
 		  	<br>
 		  	<a class="button">Upload New Image</a>
-		  	</div>
-  		
+		  	</div> -->
+
   		</div>
   	</body>
 </html>
