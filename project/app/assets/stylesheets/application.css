@@ -67,6 +67,60 @@ nav ul li {
   line-height: 40px;
 }
 
+.bMargins{
+  margin-left:15%;
+  margin-right:15%;
+  font-family: 'Nova Square', cursive;
+  color:white;
+}
+
+.bMargins a{
+  font-size: 16px;
+}
+
+.col-l3{
+  float: left;
+  margin-left: 5%;
+  width: 30%;
+  padding-left: 10px;
+  border-style: groove;
+  border-left-width: 3px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+.col-m3{
+  display: inline-block;
+  width: 30%;
+  padding-left: 10px;
+  border-style: groove;
+  border-left-width: 3px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+.col-r3{
+  float:right;
+  width: 30%;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-style: groove;
+  border-left-width: 3px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+/*I don't think we should include profile image for now because it complicates the project but am adding the code commented out just in case 
+.profile-image{
+  max-height: 200px;
+  max-width: 200px;
+  padding-left: 5%;
+  padding-right: 5%;
+} */
+
 form {
   color: white;
   font-family: 'Nova Square', cursive;
