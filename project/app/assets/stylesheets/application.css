@@ -332,6 +332,15 @@ main {
   background: #2e2728;
 }
 
+.match {
+  display: inline-block;
+  width: 25%;
+  background: #fff;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
 
 /*.nav-menu > ul > li:after {
    content: "\25BC";

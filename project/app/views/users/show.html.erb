@@ -58,4 +58,11 @@
 <hr>
 
 <h3>Group Matches</h3>
-<%= @matches %>
+<div class="matches">
+<% @matches.each do |m| %>
+  <div class="match">
+    <p>Name: <%= m.name%><br>
+    Score: <%= m.score%></p>
+  </div>
+<% end %>
+</div>

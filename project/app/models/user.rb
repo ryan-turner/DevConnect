@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
 			m.score = @match_score
 			@matches.push(m)
 		end
+		@matches.sort! { |a,b| b.score <=> a.score }
 		return @matches
 	end
 
