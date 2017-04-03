@@ -59,10 +59,17 @@
 
 <h3>Group Matches</h3>
 <div class="matches">
-<% @matches.each do |m| %>
-  <div class="match">
-    <p>Name: <%= m.name%><br>
-    Score: <%= m.score%></p>
-  </div>
+<% if @matches.any? %>
+  <% @matches.each do |m| %>
+    <div class="match">
+      <p>Name: <%= m.name %><br>
+      Match Score: <%= m.score %><br>
+      Interest: <%= m.interest %><br>
+      Language: <%= m.language %><br>
+      Meeting Time: <%= m.availability %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No groups found.</p>
 <% end %>
 </div>

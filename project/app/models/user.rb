@@ -21,6 +21,9 @@ class User < ActiveRecord::Base
 			m = OpenStruct.new
 			m.name = g.name
 			m.score = @match_score
+			m.language = g.language_preference.strip
+			m.interest = g.interest.strip
+			m.availability = g.availability.strip
 			@matches.push(m)
 		end
 		@matches.sort! { |a,b| b.score <=> a.score }
