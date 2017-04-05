@@ -20,14 +20,10 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: project
-  password: project
 
 development:
   <<: *default
   database: project_development
-  username: project
-  password: project
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -88,4 +84,4 @@ production:
   <<: *default
   database: project_production
   username: project
-  password: project
+  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
