@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	belongs_to :group
 
 	def self.matches(user)
 		@groups= Group.all
@@ -24,6 +25,7 @@ class User < ActiveRecord::Base
 			m.language = g.language_preference.strip
 			m.interest = g.interest.strip
 			m.availability = g.availability.strip
+			m.groupid = g.id
 			@matches.push(m)
 		end
 		@matches.sort! { |a,b| b.score <=> a.score }
