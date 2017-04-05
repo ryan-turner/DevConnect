@@ -1,4 +1,4 @@
-# PostgreSQL. Versions 8.2 and up are supported.
+#PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -20,11 +20,14 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: project
+  password: project
 
 development:
   <<: *default
   database: project_development
-
+  username: project
+  password: project
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: project_test
+  username: project 
+  password: project 
+  host: localhost
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,4 +88,4 @@ production:
   <<: *default
   database: project_production
   username: project
-  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
+  password: project

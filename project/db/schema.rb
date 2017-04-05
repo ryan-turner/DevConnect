@@ -17,12 +17,8 @@ ActiveRecord::Schema.define(version: 20170402222753) do
   enable_extension "plpgsql"
 
   create_table "groups", force: :cascade do |t|
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "name",                limit: 100
-    t.string   "interest",            limit: 100
-    t.string   "language_preference", limit: 100
-    t.string   "availability",        limit: 100
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
