@@ -61,13 +61,13 @@
 <div class="matches">
 <% if @matches.any? %>
   <% @matches.each do |m| %>
-    <div class="match">
+    <a class="match">
       <p>Name: <%= m.name %><br>
       Match Score: <%= m.score %><br>
       Interest: <%= m.interest %><br>
       Language: <%= m.language %><br>
       Meeting Time: <%= m.availability %></p>
-    </div>
+    </a>
   <% end %>
 <% else %>
   <p>No groups found.</p>

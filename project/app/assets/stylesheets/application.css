@@ -344,6 +344,35 @@ main {
   padding: 10px 15px;
   box-sizing: border-box;
   margin-right: 20px;
+  transition: all .25s;
+  position: relative;
+}
+
+.match:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: 'Join';
+  position: absolute;
+  color: #000;
+  opacity: 0;
+  transition: all .25s;
+  text-align: center;
+  background: #fff;
+  top: 0;
+  left: 0;
+  font-size: 35px;
+  padding: 50px 0 0 0;
+  box-sizing: border-box;
+}
+
+.match:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.match:hover:before {
+  opacity: 1;
 }
 
 .match p {

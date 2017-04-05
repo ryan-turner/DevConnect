@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20170402222753) do
     t.string   "interest",            limit: 100
     t.string   "language_preference", limit: 100
     t.string   "availability",        limit: 100
+    t.string   "member_1",            limit: 45
+    t.string   "member_2",            limit: 45
+    t.string   "member_3",            limit: 45
+    t.string   "member_4",            limit: 45
+    t.string   "member_5",            limit: 45
   end
 
   create_table "users", force: :cascade do |t|
