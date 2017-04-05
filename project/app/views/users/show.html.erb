@@ -61,7 +61,7 @@
 <div class="matches">
 <% if @matches.any? %>
   <% @matches.each do |m| %>
-    <a class="match">
+    <a class="match" data-groupid="<%= m.groupid %>">
       <p>Name: <%= m.name %><br>
       Match Score: <%= m.score %><br>
       Interest: <%= m.interest %><br>
