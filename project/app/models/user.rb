@@ -33,3 +33,7 @@ class User < ActiveRecord::Base
 	end
 
 end
+
+# Commands to configure database
+# rails g migration add_references_to_users group:references 
+# rake db:migrate
