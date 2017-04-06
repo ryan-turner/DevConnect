@@ -32,7 +32,7 @@ It's important to note why these assertions are stillthrowing errors, and that i
 Another important note is that Ruby provided many of our current tests, since we are a web-based application we mostly need to be sure of forms working properly, 2XX status codes being returned from redirection URLs, etc. 
 
 
-###Running Automated Tests
+### Running Automated Tests
 In order to run the automated tests, it's important to be in the rails project directory. All the tests are located in `test`. For our tests, everything we're concerned about is located in `test/controllers` and `test/models` where we can test out our forms, and URLs. In order to run these tests, the testing environment must be setup using the command `rake db:test:prepare` and then the command `rake test` will run all the necessary tests.
 
 ## User Acceptance Tests
