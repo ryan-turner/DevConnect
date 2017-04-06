@@ -10,14 +10,14 @@ Make Finding Groups Less Terrible
 
 ---
 ## Automated Tests
-Many of the automated tests were created using the built-in testing apparatust provides by our ruby project. 
-Here is an example of some of the automated tests that we ran that failed.
+Many of the automated tests were created using the built-in testing apparatus provided by our rails project. 
+Here is an example of some of the automated tests we ran that failed.
 
 ![Image 1](http://i.imgur.com/Xaq1ya9.png)
 
 7 tests were failed due to a variety of circumstances (ultimately circumstances that were a result of not properly initalizing variables)
 
-For example, the 3rd error test `GroupsControllerTest#test_should_get_index:` was a result of not having the group page up and running. After creating the page we the error is resolved and the assertion passes.
+For example, the 3rd error test `GroupsControllerTest#test_should_get_index:` was a result of not having the group page up and running. After we created the page, the error resolved and the assertion passes.
 The actual test for this can be seen here
 
 ![Image 2](http://i.imgur.com/yVJGv3Z.png)
@@ -27,13 +27,13 @@ After several of these errors were resolved we are left with only 2 `GroupsContr
 
 ![Image 3](http://i.imgur.com/D9BGQxK.png)
 
-It's important to note why these assertions are stillthrowing errors, and that is because we currently do not have our users and groups integrated, and still in the rudimentary stages of developing the groups. In the next few days we hope to have these assertion errors resolved.
+It's important to note why these assertions are still throwing errors because we currently do not have our users and groups integrated. We are still in the rudimentary stages of developing the groups. In the next few days we hope to have these assertion errors resolved.
 
 Another important note is that Ruby provided many of our current tests, since we are a web-based application we mostly need to be sure of forms working properly, 2XX status codes being returned from redirection URLs, etc. 
 
 
 ### Running Automated Tests
-In order to run the automated tests, it's important to be in the rails project directory. All the tests are located in `test`. For our tests, everything we're concerned about is located in `test/controllers` and `test/models` where we can test out our forms, and URLs. In order to run these tests, the testing environment must be setup using the command `rake db:test:prepare` and then the command `rake test` will run all the necessary tests.
+In order to run the automated tests, it's important to be in the rails project directory (Devconnect > project). All the tests are located in `test`. For our tests, everything we're concerned about is located in `test/controllers` and `test/models` where we can test out our forms and URLs. In order to run these tests, the testing environment must be setup using the command `rake db:test:prepare` and then the command `rake test` will run all the necessary tests.
 
 ## User Acceptance Tests
 
