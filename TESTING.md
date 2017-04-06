@@ -12,14 +12,19 @@ Make Finding Groups Less Terrible
 ## Automated Tests
 Many of the automated tests were created using the built-in testing apparatust provides by our ruby project. 
 Here is an example of some of the automated tests that we ran that failed.
+
 ![Image 1](http://i.imgur.com/Xaq1ya9.png)
+
 7 tests were failed due to a variety of circumstances (ultimately circumstances that were a result of not properly initalizing variables)
 
 For example, the 3rd error test `GroupsControllerTest#test_should_get_index:` was a result of not having the group page up and running. After creating the page we the error is resolved and the assertion passes.
 The actual test for this can be seen here
+
 ![Image 2](http://i.imgur.com/yVJGv3Z.png)
 
+
 After several of these errors were resolved we are left with only 2 `GroupsControllerTest` errors and one `UserControllerTest` error.
+
 ![Image 3](http://i.imgur.com/D9BGQxK.png)
 
 It's important to note why these assertions are stillthrowing errors, and that is because we currently do not have our users and groups integrated, and still in the rudimentary stages of developing the groups. In the next few days we hope to have these assertion errors resolved.
