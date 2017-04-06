@@ -10,24 +10,15 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-# 
-ActiveRecord::Schema.define(version: 20170405022656) do
+
+ActiveRecord::Schema.define(version: 20170406001603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "groups", force: :cascade do |t|
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "name",                limit: 100
-    t.string   "interest",            limit: 100
-    t.string   "language_preference", limit: 100
-    t.string   "availability",        limit: 100
-    t.string   "member_1",            limit: 45
-    t.string   "member_2",            limit: 45
-    t.string   "member_3",            limit: 45
-    t.string   "member_4",            limit: 45
-    t.string   "member_5",            limit: 45
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,10 +35,9 @@ ActiveRecord::Schema.define(version: 20170405022656) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "group_id"
-    t.integer  "groups_id"
   end
 
-  add_index "users", ["groups_id"], name: "index_users_on_groups_id", using: :btree
+  add_index "users", ["group_id"], name: "index_users_on_group_id", using: :btree
 
   add_foreign_key "users", "groups"
 end
