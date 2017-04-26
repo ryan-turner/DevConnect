@@ -71,12 +71,16 @@ form {
   color: white;
   font-family: 'Nova Square', cursive;
   display:run-in;
+  padding-left: 20%;
+  padding-right: 20%;
+
 }
 
 fieldset{
   background-color: white;
   color: black;
   margin: 0 auto 20px;
+  border-radius: 7px;
 }
 
 legend{
@@ -160,16 +164,15 @@ div {
   background-color: #f0f0f0;
 }
 
-h2 {
+/*h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-}
+    /*margin: -7px;*/
+    /*margin-bottom: 0px;
+    color: #fff;*/
+
 
 ul li{
   font-size:12px;
@@ -249,6 +252,7 @@ main {
   display: block;
   clear:both;
 }
+
 
 
 .menu-wrap {
