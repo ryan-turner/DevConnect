@@ -71,8 +71,8 @@ form {
   color: white;
   font-family: 'Nova Square', cursive;
   display:run-in;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 
 }
 
@@ -127,7 +127,7 @@ pre {
 }
 
 a{
-  color: #fff;
+  color: #3d3d3d;
 
   &:visited{
     color: #666;
@@ -253,6 +253,12 @@ main {
   clear:both;
 }
 
+.clearfix > li{
+  color:grey;
+  display:block;
+  opacity: 1;
+}
+
 
 
 .menu-wrap {
@@ -262,14 +268,13 @@ main {
 }
 
 .menu {
-  width{
-    1000px;
-    margin: 0px auto;
-  }
+  width: 1000px;
+  margin: 0px auto;
 }
 .menu li {
    margin: 0px;
    list-style: none;
+   color: grey;
    font-family: 'Nova Square', cursive;
 }
 
@@ -294,10 +299,11 @@ main {
   float: left;
   display: inline-block;
   position: relative;
+  color: grey;
   font-size: 19px;
   margin: 10px;
 }
-
+/*this is the background of the submenu when you hover on it */
 .menu >ul > li:hover > a, .menu >ul > .current-item >a {
   background: white;
 }
