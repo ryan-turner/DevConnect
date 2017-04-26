@@ -1,0 +1,40 @@
+<DOCTYPE! html>
+<html>
+	<head>
+    	<title>DevConnect</title>
+    	<link href="../../assets/stylesheets/application.css" rel="stylesheet" type="text/css">
+    	<link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
+  	</head>
+  	<body>
+  		<a href="/"><img src="DevConnect.png" id="logo">
+  		<div>
+	  		<h1 style="color: white;" ><%=database.FirstName%>'s Profile</h1>
+	  		<br>
+				<form>
+				<fieldset>
+		  	<legend>Bio</legend>
+			  		<br>
+			  		First Name: <%=database.FirstName%><br>
+			  		Last Name: <%=database.LastName%><br>
+			  		Email Address: <%=database.email%><br>
+			  		<br>
+			</fieldset>
+			<fieldset>
+	  		<legend>Languages and Interests</legend>
+	  		<br>
+		  		Languages: <br>
+          <%=database.language1%>
+          <%=database.language2%>
+          <%=database.interest%>
+					<br>
+				</fieldset>
+				<fieldset>
+	  		<legend>Availability</legend>
+	  		<br>
+		  		<%=database.availability1%>
+          <%=database.availability2%>
+					<br>
+				</fieldset>
+				</form>
+		</body>
+</html>
