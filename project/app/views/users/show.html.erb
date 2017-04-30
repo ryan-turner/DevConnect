@@ -59,17 +59,21 @@
 
 <h3>Group Matches</h3>
 <div class="matches">
-<% if @matches.any? %>
-  <% @matches.each do |m| %>
-    <a class="match">
-      <p>Name: <%= m.name %><br>
-      Match Score: <%= m.score %><br>
-      Interest: <%= m.interest %><br>
-      Language: <%= m.language %><br>
-      Meeting Time: <%= m.availability %></p>
-    </a>
+  <% if @matches.any? %>
+      <% @matches.each do |m| %>
+        <div class="match">
+          <p data-group-id="<%= m.id %>">Name: <%= m.name %><br>
+          Match Score: <%= m.score %><br>
+          Interest: <%= m.interest %><br>
+          Language: <%= m.language %><br>
+          Meeting Time: <%= m.availability %></p>
+        <%= form_tag({:action => "add_group", :controller => "users"}) do |f| %>
+          <%= hidden_field_tag :group_id, m.id %>
+          <%= submit_tag 'Join Group' %>
+        <% end %>
+        </div>
+      <% end %>
+  <% else %>
+    <p>No groups found.</p>
   <% end %>
-<% else %>
-  <p>No groups found.</p>
-<% end %>
 </div>

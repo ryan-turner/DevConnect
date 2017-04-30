@@ -24,14 +24,17 @@ class User < ActiveRecord::Base
 			m.language = g.language_preference.strip
 			m.interest = g.interest.strip
 			m.availability = g.availability.strip
+			m.id = g.id
 			@matches.push(m)
 		end
 		@matches.sort! { |a,b| b.score <=> a.score }
 		return @matches
 	end
 
-end
+	def self.add_to_group(id, group_id)
+		@user = User.find(id)
+		@user.groupid = group_id
+		@user.save
+	end
 
-# Commands to configure database
-# rails g migration add_references_to_users group:references 
-# rake db:migrate
+end
