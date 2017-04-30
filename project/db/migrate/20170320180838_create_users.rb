@@ -10,7 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :time1
       t.string :time2
       t.string :skill
-      t.string :password
+      t.string :password_digest
       t.integer :groupid
 
       t.timestamps null: false

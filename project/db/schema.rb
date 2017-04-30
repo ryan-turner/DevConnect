@@ -36,10 +36,10 @@ ActiveRecord::Schema.define(version: 20170402222753) do
     t.string   "time1"
     t.string   "time2"
     t.string   "skill"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "groupid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
