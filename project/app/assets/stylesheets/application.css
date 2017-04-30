@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: #333;
-  font-family: 'Nove Square', cursive;
+  font-family: 'Nova Square', sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -37,7 +37,7 @@ nav ul li {
   margin: 5px 0;
   text-align: center;
   font-size: 25px;
-  font-family: 'Nova Square', cursive;
+  font-family: 'Nova Square', sans-serif;
   font-weight:bold;
   transition: all .3s;
   display: inline-block;
@@ -130,23 +130,29 @@ p, ol, ul, td {
   line-height:24px;
 }
 
+.center {
+  text-align: center;
+}
+
+a.center {
+  display: block;
+  margin: 0 auto;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-a{
-  color: #3d3d3d;
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .25s;
+}
 
-  &:visited{
-    color: #666;
-  }
-
-  &hover{
-    color: #fff;
-    background-color: #000;
-  }
+a:hover {
+  opacity: 0.8;
 }
 
 div {
