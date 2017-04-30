@@ -29,6 +29,9 @@ class User < ActiveRecord::Base
 		@matches.sort! { |a,b| b.score <=> a.score }
 		return @matches
 	end
+	
+	#Allows for storing of bcrypt passwords.
+	has_secure_password
 
 end
 
