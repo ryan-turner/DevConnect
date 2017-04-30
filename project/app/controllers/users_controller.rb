@@ -63,19 +63,8 @@ class UsersController < ApplicationController
   end
 
   def add_group
-    @user = User.add_to_group(params[:id], params[:group_id])
-    flash[:notice] = "Group has been added!"
+    User.add_to_group(params[:id], params[:group_id])
   end
-
-  # def add_group
-  #   @user = current_user
-  #   @user.update_attributes(group_id: params[:group_id])
-
-  #   respond_to do |format|
-  #     flash[:notice] = "Group has been added!"
-  #     redirect_to @user.group
-  #   end
-  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
