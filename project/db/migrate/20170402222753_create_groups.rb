@@ -5,7 +5,7 @@ class CreateGroups < ActiveRecord::Migration
       t.string :interest
       t.string :language_preference
       t.string :availability
-      t.integer :id
+      t.integer :group_id
       t.timestamps null: false
     end
   end

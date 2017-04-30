@@ -11,18 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406001603) do
+ActiveRecord::Schema.define(version: 20170402222753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "groups", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "interest"
+    t.string   "language_preference"
+    t.string   "availability"
+    t.integer  "group_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "interest"
     t.string   "language1"
@@ -34,10 +40,6 @@ ActiveRecord::Schema.define(version: 20170406001603) do
     t.integer  "groupid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "group_id"
   end
 
-  add_index "users", ["group_id"], name: "index_users_on_group_id", using: :btree
-
-  add_foreign_key "users", "groups"
 end
