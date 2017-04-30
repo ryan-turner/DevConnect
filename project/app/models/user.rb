@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	def self.matches(user)
 		@groups= Group.all
+		@users = User.all
 		@matches = []
 		@groups.each do |g|
 			@match_score = 0
@@ -18,7 +19,25 @@ class User < ActiveRecord::Base
 			elsif g.availability.strip == user.time2.strip
 				@match_score += 10
 			end
+			
+			@uniqueSkill = true
+			@users.each do |u|
+				if u.groupid == g.id and u.id != user.id
+					if u.skill == user.skill
+						@uniqueSkill = false
+						break
+					end
+				end
+			end
+			
 			m = OpenStruct.new
+			if @uniqueSkill == true
+				@match_score += 10
+				m.unique_skill_bonus = true
+			else
+				m.unique_skill_bonus = false
+			end
+
 			m.name = g.name
 			m.score = @match_score
 			m.language = g.language_preference.strip
