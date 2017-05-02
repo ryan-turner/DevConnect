@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
   resources :groups
-  resources :users
+  resources :users do
+    member do
+      post :add_group
+      get :show
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

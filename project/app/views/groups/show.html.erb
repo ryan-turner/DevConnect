@@ -27,3 +27,21 @@
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
+
+<hr>
+
+<h3>Members</h3>
+<div class="matches">
+  <% if @members.any? %>
+    <% @members.each do |m| %>
+      <div class="match">
+        <p>Name: <%= m.name %><br>
+          Skill: <%= m.skill %><br>
+          Available: <%= m.time1 %> &amp; <%= m.time2 %>
+        </p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No members found.</p>
+  <% end %>
+</div>
