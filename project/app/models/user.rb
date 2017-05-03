@@ -49,14 +49,18 @@ class User < ActiveRecord::Base
 		@matches.sort! { |a,b| b.score <=> a.score }
 		return @matches
 	end
-	
-	#Allows for storing of bcrypt passwords.
-	has_secure_password
 
 	def self.add_to_group(id, group_id)
 		@user = User.find(id)
+		puts 'user id:'
+		puts id 
 		@user.groupid = group_id
+		puts 'group id:'
+		puts group_id
 		@user.save
 	end
+	
+	#Allows for storing of bcrypt passwords.
+	has_secure_password
 
 end
