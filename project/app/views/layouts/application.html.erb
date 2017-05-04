@@ -10,15 +10,22 @@
 <body>
 	<a href="/"><img id="logo" src="/assets/images/DevConnect.png" alt="DevConnect Logo"></a>
 	<nav>
-		<ul>
+		<% if current_user %> 
+		  <ul> 
+		    <li><%= link_to "My Profile", current_user%></li> 
+		    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		    <li><a class="button" href="/about/index">About</a></li>
+		  </ul> 
+		<% else %> 
+		  <ul> 
 			<li><a class="button" href="/users/new">Signup</a></li>
 			<li><a class="button" href="/login">Login</a></li>
 			<li><a class="button" href="/about/index">About</a></li>
-		</ul>
+		  </ul> 
+		<% end %>
 	</nav>
 	<main>
 		<%= yield %>
 	</main>
-
 </body>
 </html>
