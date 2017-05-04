@@ -11,8 +11,9 @@
 	<a href="/"><img id="logo" src="/assets/images/DevConnect.png" alt="DevConnect Logo"></a>
 	<nav>
 		<% if current_user %> 
-		  <ul> 
-		    <li><%= link_to "My Profile",  current_user, class: "button" %></li> 
+		  <ul>
+		  	<li><%= link_to "Homepage", '/', class: "button" %></li>
+		    <li><%= link_to "My Profile",  current_user, class: "button" %></li>
 		    <li><%= link_to "Log out", logout_path, method: "delete", class: "button" %></li>
 		    <li><a class="button" href="/about/index">About</a></li>
 		  </ul> 
