@@ -56,7 +56,7 @@ Trello Project: https://trello.com/b/Ac1Rkcqh/team-product-sprint-1
 ![Projects](http://i.imgur.com/19TRYdy.png)
 
 ## Auto Documentation
-Auto documentation can be found at https://github.com/Dpasi314/DevConnect/tree/master/project/doc/api
+Auto documentation can be found at https://github.com/Dpasi314/DevConnect/tree/master/project/doc/api <br>
 To run the auto documentation: bundle exec rake doc:rails
 
 ## Matching Algorithm
