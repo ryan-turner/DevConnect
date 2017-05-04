@@ -1,5 +1,6 @@
+# User Model - This is where the matching algorithm is implemeneted.
 class User < ActiveRecord::Base
-
+	# Matching algorithm
 	def self.matches(user)
 		@groups= Group.all
 		@users = User.all
@@ -50,11 +51,11 @@ class User < ActiveRecord::Base
 		return @matches
 	end
 
+	# Displays a group's members based on one of the user's group ID's.
 	def self.group_members(user)
 		if user.groupid.present?
 			@members = User.where(groupid: user.groupid)
 		else
-
 			@members = []
 			puts "member list:"
 			puts @members
@@ -62,13 +63,13 @@ class User < ActiveRecord::Base
 		return @members
 	end
 
+	# Small method that finds a user and assigns them to a gorup id, effectively adding them to the group.
 	def self.add_to_group(id, group_id)
 		@user = User.find(id)
 		@user.groupid = group_id
 		@user.save
 	end
 	
-	#Allows for storing of bcrypt passwords.
+	#Allows for storing of bcrypt hashed passwords.
 	has_secure_password
-
 end

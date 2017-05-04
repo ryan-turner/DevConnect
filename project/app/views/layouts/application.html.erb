@@ -12,8 +12,8 @@
 	<nav>
 		<% if current_user %> 
 		  <ul> 
-		    <li><%= link_to "My Profile", current_user%></li> 
-		    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		    <li><%= link_to "My Profile",  current_user, class: "button" %></li> 
+		    <li><%= link_to "Log out", logout_path, method: "delete", class: "button" %></li>
 		    <li><a class="button" href="/about/index">About</a></li>
 		  </ul> 
 		<% else %> 

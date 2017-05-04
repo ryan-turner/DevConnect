@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:index, :show]
 
   # GET /users
   # GET /users.json
@@ -9,6 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
+  # Method will show the currently viewing user's matches and groups.
   def show
     @matches = User.matches(@user)
     @members = User.group_members(@user)
@@ -25,6 +27,8 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
+  # We create a new user with this method, utilizing user_params to control the attributes of every user.
+  # This is also where a user receives their Session ID if they're successfully able to sign up. This only happens if the DB saves the data.
   def create
     @user = User.new(user_params)
 
@@ -39,6 +43,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
+  # Mehtod for updating information about a user.
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -53,6 +58,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
+  # Method for removing users from DB.
   def destroy
     @user.destroy
     respond_to do |format|
@@ -72,6 +78,9 @@ class UsersController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # These are our parameters for a user:
+    # First name, last name, email, coding interest, proficient languages (2),
+    # available meeting times (2), personal skills, password hash, and the group they belong to.
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :interest, :language1, :language2, :time1, :time2, :skill, :password, :groupid)
     end
