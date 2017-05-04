@@ -12,7 +12,8 @@
 We are creating a web application to match students in a course for group projects, based on parameters like skills (and level of proficiency in that skill), availability, interests, and previous courses taken.
 ## How to Run
 Visit the final web application at https://cscidevconnect.herokuapp.com/
-
+To run the auto documentation: bundle exec rake doc:rails
+To run the test suite: rake test
 ## Our Vision
 Make finding groups, just a little less terrible.
 
