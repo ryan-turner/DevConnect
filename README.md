@@ -18,7 +18,8 @@ Make finding groups, just a little less terrible.
 
 ## Motivation
 We recognise the need for a group making facilitator for computer science class projects, because it is often challenging to build a group when you do not already personally know people in the course. As a result, many groups end up randomly joining together, leading to uneven distribution of skills across the group, which makes group cohesion difficult, thus justifying the need for this kind of web application.
-
+## Our Presentation (DevConnect_Part5)
+https://prezi.com/view/RD3r2mP0PYLmqwtZdn2c/
 ## Risks
 * Lack of experience in web application development
 * Many of the team members do not know each other previous to starting this project
