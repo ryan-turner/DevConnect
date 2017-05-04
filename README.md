@@ -56,6 +56,7 @@ Trello Project: https://trello.com/b/Ac1Rkcqh/team-product-sprint-1
 
 ## Auto Documentation
 Auto documentation can be found at https://github.com/Dpasi314/DevConnect/tree/master/project/doc/api
+To run the auto documentation: bundle exec rake doc:rails
 
 ## Matching Algorithm
 Here is the pseudocode used in our matching algorithm to make group recommendations for users. This is the algorithm that runs when a user first signs up for group finding.
