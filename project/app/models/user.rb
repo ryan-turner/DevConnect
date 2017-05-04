@@ -1,8 +1,6 @@
-# User Model - This is where the matching algorithm is implemented
+# User Model - This is where the matching algorithm is implemeneted.
 class User < ActiveRecord::Base
 	# Matching algorithm
-	# A group is assigned a score based on whether the user has similar characteristics such as language preference, time availability, and project interest
-	# Additionally, a user is given a bonus if their skillset is not already represented within the group
 	def self.matches(user)
 		@groups= Group.all
 		@users = User.all
@@ -59,11 +57,13 @@ class User < ActiveRecord::Base
 			@members = User.where(groupid: user.groupid)
 		else
 			@members = []
+			puts "member list:"
+			puts @members
 		end
 		return @members
 	end
 
-	# Small method that finds a user and assigns them to a group id, effectively adding them to the group.
+	# Small method that finds a user and assigns them to a gorup id, effectively adding them to the group.
 	def self.add_to_group(id, group_id)
 		@user = User.find(id)
 		@user.groupid = group_id

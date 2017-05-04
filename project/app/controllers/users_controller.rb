@@ -67,7 +67,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # Adds user to a group by adding the group id to the user's groupid field
   def add_group
     User.add_to_group(params[:id], params[:group_id])
   end
