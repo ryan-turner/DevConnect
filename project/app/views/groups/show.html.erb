@@ -35,7 +35,7 @@
   <% if @members.any? %>
     <% @members.each do |m| %>
       <div class="match">
-        <p>Name: <%= m.name %><br>
+        <p>Name: <%= m.first_name %> <%= m.last_name %><br>
           Skill: <%= m.skill %><br>
           Available: <%= m.time1 %> &amp; <%= m.time2 %>
         </p>

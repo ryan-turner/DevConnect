@@ -52,11 +52,7 @@ class User < ActiveRecord::Base
 
 	def self.add_to_group(id, group_id)
 		@user = User.find(id)
-		puts 'user id:'
-		puts id 
 		@user.groupid = group_id
-		puts 'group id:'
-		puts group_id
 		@user.save
 	end
 	

@@ -372,6 +372,7 @@ main {
   margin-right: 20px;
   transition: all .25s;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .match p {
