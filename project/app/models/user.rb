@@ -50,6 +50,18 @@ class User < ActiveRecord::Base
 		return @matches
 	end
 
+	def self.group_members(user)
+		if user.groupid.present?
+			@members = User.where(groupid: user.groupid)
+		else
+
+			@members = []
+			puts "member list:"
+			puts @members
+		end
+		return @members
+	end
+
 	def self.add_to_group(id, group_id)
 		@user = User.find(id)
 		@user.groupid = group_id
