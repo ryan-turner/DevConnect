@@ -51,6 +51,25 @@
 <br><br>
 
 <hr>
+<h3>Group Members</h3>
+<div class="matches">
+  <% if @members.count > 1 %>
+    <% @members.each do |m| %>
+    <% if m.id != @user.id %>
+        <div class="match">
+          <p>Name: <%= m.first_name %> <%= m.last_name %><br>
+            Skill: <%= m.skill %><br>
+            Available: <%= m.time1 %> &amp; <%= m.time2 %><br>
+            Email: <a href="mailto:<%= m.email %>"><%= m.email %></a>
+          </p>
+        </div>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>No team members found.</p>
+  <% end %>
+</div>
+<hr>
 
 <h3>Group Matches</h3>
 <div class="matches">

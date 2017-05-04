@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @matches = User.matches(@user)
+    @members = User.group_members(@user)
   end
 
   # GET /users/new
