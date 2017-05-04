@@ -1,3 +1,5 @@
+#Purpose is to establish the various routes that take you from one part of
+#the web application to another
 Rails.application.routes.draw do
 
   resources :groups

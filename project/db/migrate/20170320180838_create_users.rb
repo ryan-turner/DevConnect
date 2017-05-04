@@ -1,4 +1,8 @@
+#this is the create users migration class
+#This allows the migration to occur so that the server that runs the
+#project has the database and its contents
 class CreateUsers < ActiveRecord::Migration
+  #This function creates the users table in the database and its attributes
   def change
     create_table :users do |t|
       t.string :first_name

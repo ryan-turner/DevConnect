@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170405022656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
+#This creates a new group in the database with the appropriate attributes
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170405022656) do
     t.string   "member_4",            limit: 45
     t.string   "member_5",            limit: 45
   end
-
+#This creates a new group in the database with the appropriate attributes
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "interest"
