@@ -375,6 +375,10 @@ main {
   margin-bottom: 20px;
 }
 
+.match a {
+  color: #000;
+}
+
 .match p {
   margin: 0;
   padding: 0;

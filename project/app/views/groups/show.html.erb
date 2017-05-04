@@ -37,7 +37,8 @@
       <div class="match">
         <p>Name: <%= m.first_name %> <%= m.last_name %><br>
           Skill: <%= m.skill %><br>
-          Available: <%= m.time1 %> &amp; <%= m.time2 %>
+          Available: <%= m.time1 %> &amp; <%= m.time2 %><br>
+          Email: <a href="mailto:<%= m.email %>"><%= m.email %></a>
         </p>
       </div>
     <% end %>
