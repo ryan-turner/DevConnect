@@ -10,6 +10,8 @@
 
 ## What does it do?
 We are creating a web application to match students in a course for group projects, based on parameters like skills (and level of proficiency in that skill), availability, interests, and previous courses taken.
+## How to Run
+Visit the final web application at https://cscidevconnect.herokuapp.com/
 
 ## Our Vision
 Make finding groups, just a little less terrible.
@@ -50,6 +52,9 @@ GitHub  Repository Link: https://github.com/Dpasi314/DevConnect
 #### Current Projects
 Trello Project: https://trello.com/b/Ac1Rkcqh/team-product-sprint-1
 ![Projects](http://i.imgur.com/19TRYdy.png)
+
+## Auto Documentation
+Auto documentation can be found at https://github.com/Dpasi314/DevConnect/tree/master/project/doc/api
 
 ## Matching Algorithm
 Here is the pseudocode used in our matching algorithm to make group recommendations for users. This is the algorithm that runs when a user first signs up for group finding.
