@@ -1,9 +1,13 @@
+#This is the users controller class
+#This parse users requests and then calls the appropraite actions
+#to the user database based on those requests
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_user, only: [:index, :show]
 
   # GET /users
   # GET /users.json
+  #Method will give the index of the users in the table
   def index
     @users = User.all
   end

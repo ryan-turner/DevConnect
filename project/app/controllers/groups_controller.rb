@@ -1,29 +1,39 @@
+#This is the groups controller class
+#This parse users requests and then calls the appropraite actions
+#to the group database based on those requests
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
   # GET /groups.json
+  #Returns the index of the items in the group table
   def index
     @groups = Group.all
   end
 
   # GET /groups/1
   # GET /groups/1.json
+  #Shows the members that make up the group
   def show
     @members = Group.members(@group)
   end
 
   # GET /groups/new
+  #Creates a new group
   def new
     @group = Group.new
   end
 
   # GET /groups/1/edit
+  #Allows you to edit a group
   def edit
   end
 
-  # POST /groups
-  # POST /groups.json
+  # Create a new group with the given information
+  #
+  # * Display that Groups were create
+  # * Add the group table in the database
+  # * Redirect user
   def create
     @group = Group.new(group_params)
 
@@ -38,8 +48,11 @@ class GroupsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /groups/1
-  # PATCH/PUT /groups/1.json
+  # Update the group with new information
+  #
+  # * Display that Groups were updated
+  # * Update the group table in the database
+  # * Redirect user
   def update
     respond_to do |format|
       if @group.update(group_params)
@@ -52,8 +65,11 @@ class GroupsController < ApplicationController
     end
   end
 
-  # DELETE /groups/1
-  # DELETE /groups/1.json
+  # Remove the group
+  #
+  # * Display that Groups was destroyed
+  # * Remove the group table in the database
+  # * Redirect user
   def destroy
     @group.destroy
     respond_to do |format|
